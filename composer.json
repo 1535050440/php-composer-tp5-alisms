@@ -1,0 +1,21 @@
+{
+    "name": "deng-tp5/alisms",
+    "description": "alisms",
+    "type": "library",
+    "license": "TIM",
+    "authors": [
+        {
+            "name": "deng",
+            "email": "1415551519@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DengTp5\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "alibabacloud/client": "^1.5"
+    }
+}
