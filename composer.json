@@ -2,7 +2,7 @@
     "name": "deng-tp5/alisms",
     "description": "alisms",
     "type": "library",
-    "license": "TIM",
+    "license": "MIT",
     "authors": [
         {
             "name": "deng",
