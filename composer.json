@@ -1,6 +1,7 @@
 {
     "name": "deng-tp5/alisms",
-    "description": "alisms",
+    "description": "alisms-sendSms",
+    "keywords": ["deng", "qrcode", "qr", "code", "php"],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,11 +12,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "DengTp5\\": "src"
+          "DengTp5\\": "src"
         }
     },
     "minimum-stability": "stable",
     "require": {
+        "php": ">=7.2",
         "alibabacloud/client": "^1.5"
     }
+    
 }
