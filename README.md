@@ -25,30 +25,44 @@ English | [简体中文](/README-zh-CN.md)
 
 
 Alibaba Cloud Client for PHP is a client tool that helps PHP developers manage credentials and send requests, [Alibaba Cloud SDK for PHP][SDK] dependency on this tool.
-
-## common.php文件
+# ThinkPhp5.1
+## 1.   common.php文件
 ````php
 /**
+ * 发送验证码公共方法
+ * @param $mobile
  * @param $code
  * @return array
- * @throws \AlibabaCloud\Client\Exception\ClientException
- * @author:  deng    (2019/7/21 23:50)
+ * @throws ClientException
+ * @author deng    (2019/8/17 10:55)
  */
-function sendSms($code)
+function sendSms($mobile, $code)
 {
     $condition = [
-        'accessKeyId' => 'xxxxxxxxxxxxx',
-        'accessSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxx',
+        'accessKeyId' => config('sms.accessKeyId'),
+        'accessSecret' => config('sms.accessSecret'),
         'code' => $code,
-        'mobile' => 150xxxx3357,
-        'signName' => '柠檬',
-        'templateCode' => 'SMS_16xxxx033'
+        'mobile' => $mobile,
+        'signName' => config('sms.signName'),
+        'templateCode' => config('sms.templateCode'),
     ];
-    $sendSms = \DengTp5\AliSms::sendSms($condition);
+    $sendSms = AliSms::sendSms($condition);
 
     return $sendSms;
 }
+````
+## 2.   sms.php
+````php
 
+// +----------------------------------------------------------------------
+// | 短信设置
+// +----------------------------------------------------------------------
+return [
+    'accessKeyId' => 'LTAIepxxx5VaFvt',
+    'accessSecret' => 'WHqEyofsxxxxxxxMHT26hmqDRrqQQEn',
+    'signName' => '模板名称',
+    'templateCode' => '模板号码'
+];
 ````
 
 ## Online Demo
