@@ -26,7 +26,7 @@ English | [简体中文](/README-zh-CN.md)
 
 Alibaba Cloud Client for PHP is a client tool that helps PHP developers manage credentials and send requests, [Alibaba Cloud SDK for PHP][SDK] dependency on this tool.
 # ThinkPhp5.1
-## 1.   common.php文件
+## 1.   application/common.php文件
 ````php
 /**
  * 发送验证码公共方法
@@ -51,7 +51,7 @@ function sendSms($mobile, $code)
     return $sendSms;
 }
 ````
-## 2.   sms.php
+## 2.   config/sms.php
 ````php
 
 // +----------------------------------------------------------------------
